@@ -127,25 +127,22 @@ body{
 
 
 .img-container{
-    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
     align-items: center;
-    /* background-color: red; */
 }
 
 .image{
-    max-height: 50%;
-    max-width: 50%; 
-    /* border: dotted 1px white ; */
+    max-width: 40%; 
+    background-color: #cf8888;
+    /* border: dotted 1px white ; */ 
 } 
 
-.file-upload-section{
-    margin: auto;
+.file-upload-section{ 
     font-weight: bold;
-    width: 50%;
+    width: 40%;
     margin-top: 10px;
     padding: 9px 0px;
     color: white;
@@ -219,13 +216,17 @@ body{
   
 @media only screen and (max-width: 600px) {
 
-    .img-container{
-        width: 100vw;
-    }
-
     .image{
         width: 90%;
+          max-height: 1005;
+          max-width: 100%; 
+          /* border: dotted 1px white ; */ 
         /* border: dotted 1px white ; */
     } 
+
+    .img-container{
+      width: 100vw;
+
+  }
 }
   
