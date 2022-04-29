@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Art Editor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+
+        <div class="header__left">
+            <img src="Untitled-1.png" alt="" />
+            <h1>YourArt</h1>
+        </div>
+
+        <div class="header__middle">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder='Search' />
+        </div>
+
+
+        <div class="header__right">
+            <a href="https://yourart-ef48d.web.app/"><i class="fa-solid fa-house"></i></a>
+            <a href=""><i class="fa-solid fa-message"></i></a>
+            <a href=""><i class="fa-solid fa-heart"></i></a>
+        </div>
+
+    </div>
+    </div>
+    <div class="line"></div>
+
+
+
+    <div class="platform">
+
+
+
+        <div class="buttons-section">
+            <button class="operation-btn" onclick="makeBright()">Brighter</button>
+            <button class="operation-btn" onclick="makeGrayScale()">GrayScale</button>
+            <button class="operation-btn" onclick="makeDark()">Darker</button>
+            <button class="operation-btn" onclick="makeEmboos()">Emboos</button>
+            <button class="operation-btn" onclick="makeSharp()">Sharp</button>
+            <button class="operation-btn" onclick="makeBlur()">Blur</button>
+
+            <input type="color" name="" id="color-picker" value="#000000" oninput="makeColorize(this)">
+            <button class="operation-btn" onclick="openColorpicker()">Colorize</button>
+
+            <input type="color" name="" id="colorize-color-picker" value="#000000" oninput="applyColorFilter(this)">
+            <button class="operation-btn" onclick="openColorizeColorPicker()">ColorFilter</button>
+
+            <button class="operation-btn" onclick="makeTransparent()">
+                <div id="color-preview"></div>
+                Transparent
+            </button>
+
+
+
+            <button class="operation-btn" onclick="crop()">crop</button>
+            <button class="operation-btn" onclick="flipvertically()">Flip</button>
+            <button class="operation-btn" onclick="displayRange()">Rotate
+                <input type="range" id="rotate-range" value="0" min="0" max="360" onchange="rotate(this)">
+            </button>
+            <button class="operation-btn" onclick="download()">Download</button>
+
+        </div>
+
+        <div class="img-container">
+            <div class="file-upload-section" onclick="selectImage()">
+                <input type="file" id="foto-file">
+                Select Image
+            </div>
+            <img id="foto-image" class="image">
+        </div>
+
+    </div>
+
+
+    <script src="app.js"></script>
+    <script
+        src="https://rawcdn.githack.com/kousik19/foto.js/045defe1a5ce06220e084e4e6f6fbaccb7621841/foto.min.js"></script>
+    <!-- <script src="https://rawcdn.githack.com/kousik19/foto.js/d604b02c69b6f037875bc4a3050b85d776dc4659/foto.js"></script> -->
+</body>
+
+</html>
