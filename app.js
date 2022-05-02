@@ -74,3 +74,11 @@ function flipvertically(){
 function rotate(elem){
     foto.rotate(elem.value);
 }
+
+function getLink()  
+{
+    image = document.querySelector('.image');
+    link = image.src;
+    // link.select();
+    navigator.clipboard.writeText(link);
+}
